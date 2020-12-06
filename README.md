@@ -1,5 +1,8 @@
 # Euler
 
+![Workflow badge](https://github.com/disalazarg/euler/workflows/test-format-verify/badge.svg)
+
+
 Personal solutions for Project Euler problems, written in Elixir.
 
 ## Structure
