@@ -8,9 +8,11 @@ defmodule Euler.Problems.Zero.Two do
   By considering the terms in the Fibonacci sequence whose values do not exceed four million, find
   the sum of the even-valued terms.
   """
+  @behaviour Euler.Problems.Behaviour
 
   alias Euler.Helpers.Fib
 
+  @impl Euler.Problems.Behaviour
   def exec(limit) do
     Fib.stream()
     |> Stream.take_while(fn n -> n < limit end)

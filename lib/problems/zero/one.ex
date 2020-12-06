@@ -6,6 +6,9 @@ defmodule Euler.Problems.Zero.One do
   Find the sum of all the multiples of 3 or 5 below 1000.
   """
 
+  @behaviour Euler.Problems.Behaviour
+
+  @impl Euler.Problems.Behaviour
   def exec(limit) do
     1..(limit - 1)
     |> Enum.filter(fn x -> rem(x, 3) == 0 or rem(x, 5) == 0 end)

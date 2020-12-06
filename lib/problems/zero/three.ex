@@ -4,14 +4,14 @@ defmodule Euler.Problems.Zero.Three do
 
   What is the largest prime factor of the number 600851475143 ?
   """
+  @behaviour Euler.Problems.Behaviour
 
   alias Euler.Helpers.Prime
 
+  @impl Euler.Problems.Behaviour
   def exec(num) do
     num
     |> Prime.factors()
-    |> Enum.sort()
-    |> Enum.reverse()
-    |> List.first()
+    |> Enum.max()
   end
 end

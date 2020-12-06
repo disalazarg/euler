@@ -1,4 +1,4 @@
-# Euler
+# Project Euler solutions
 
 ![Workflow badge](https://github.com/disalazarg/euler/workflows/test-format-verify/badge.svg)
 
