@@ -31,3 +31,5 @@ jobs:
       run: mix format --check-formatted
     - name: Run tests
       run: mix test
+    - name: Static code analysis
+      run: mix credo -a
