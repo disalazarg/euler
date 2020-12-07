@@ -24,4 +24,16 @@ defmodule Euler.Helpers.PrimeTest do
       end
     end
   end
+
+  describe "a stream of prime numbers" do
+    test "it works as a stream" do
+      result =
+        Prime.stream()
+        |> Stream.take(6)
+        |> Enum.to_list()
+        |> List.last()
+
+      assert result == 13
+    end
+  end
 end
