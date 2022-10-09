@@ -4,8 +4,8 @@ defmodule Euler.MixProject do
   def project do
     [
       app: :euler,
-      version: "0.1.0",
-      elixir: "~> 1.10",
+      version: "0.1.1",
+      elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
       deps: deps()
@@ -22,12 +22,10 @@ defmodule Euler.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.10", only: :test},
-      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.16", only: :test},
+      {:dialyxir, "~> 1.3", only: [:dev, :test], runtime: false},
       {:propcheck, "~> 1.3", only: [:test, :dev]}
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
 end
