@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     env:                        
       MIX_ENV: test
-      elixir-version: '1.10.3' # Define the elixir version [required]
-      otp-version: '22.3' # Define the OTP version [required]
+      elixir-version: '1.14.4' # Define the elixir version [required]
+      otp-version: '25.3.1' # Define the OTP version [required]
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up Elixir
-      uses: actions/setup-elixir@v1
+      uses: erlef/setup-beam@v1
       with:
         elixir-version: ${{ env.elixir-version }}
         otp-version: ${{ env.otp-version }}
