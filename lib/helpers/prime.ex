@@ -9,7 +9,7 @@ defmodule Euler.Helpers.Prime do
     |> Stream.concat(
       Stream.iterate(1, &(&1 + 1))
       |> Stream.flat_map(fn k -> [6 * k - 1, 6 * k + 1] end)
-      |> Stream.filter(&is_prime/1)
+      |> Stream.filter(&prime?/1)
     )
   end
 
@@ -30,8 +30,8 @@ defmodule Euler.Helpers.Prime do
 
   defp decom([_c | cs], num, list), do: decom(cs, num, list)
 
-  @spec is_prime(integer) :: boolean
-  defp is_prime(n) do
+  @spec prime?(integer) :: boolean
+  defp prime?(n) do
     limit = :math.sqrt(n)
 
     stream()

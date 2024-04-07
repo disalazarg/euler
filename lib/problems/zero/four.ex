@@ -14,14 +14,14 @@ defmodule Euler.Problems.Zero.Four do
     upper = :math.pow(10, digits) |> round()
     range = lower..upper
 
-    for x <- range, y <- range, is_palindrome(x * y) do
+    for x <- range, y <- range, palindrome?(x * y) do
       x * y
     end
     |> Enum.max()
   end
 
-  @spec is_palindrome(integer) :: bool
-  defp is_palindrome(num) do
+  @spec palindrome?(integer) :: bool
+  defp palindrome?(num) do
     ns = to_string(num)
 
     ns == String.reverse(ns)
