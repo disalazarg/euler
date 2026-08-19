@@ -8,13 +8,18 @@ defmodule Euler.MixProject do
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
-      preferred_cli_env: [
+      deps: deps()
+    ]
+  end
+
+  def cli do
+    [
+      preferred_envs: [
         coveralls: :test,
         "coveralls.detail": :test,
         "coveralls.html": :test,
         "coveralls.json": :test
-      ],
-      deps: deps()
+      ]
     ]
   end
 

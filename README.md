@@ -17,3 +17,7 @@ Tests follow a similar structure, with problem-specific tests of the traditional
 ## TODOs
 
 Obviously there's many problems yet to be solved, but there's also the list of open issues at GitHub for non-solution improvements planned.
+
+## Authors
+
+- Daniel Salazar <disalazarg@gmail.com>
